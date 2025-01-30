@@ -1,0 +1,151 @@
+game-website/
+│
+├── index.html          # Main homepage
+├── style.css           # Styles for the website
+├── script.js           # Shared JavaScript (if needed)
+├── tic-tac-toe/        # Tic-Tac-Toe game
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── snake/              # Snake game
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── memory-game/        # Memory game
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+└── assets/             # Shared assets (images, sounds, etc.)
+    ├── images/
+    └── sounds/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Game Website!</h1>
+    <p>Choose a game to play:</p>
+  </header>
+  <main>
+    <div class="game-list">
+      <a href="tic-tac-toe/index.html" class="game-card">
+        <h2>Tic-Tac-Toe</h2>
+        <p>A classic two-player game.</p>
+      </a>
+      <a href="snake/index.html" class="game-card">
+        <h2>Snake</h2>
+        <p>Guide the snake to eat food and grow!</p>
+      </a>
+      <a href="memory-game/index.html" class="game-card">
+        <h2>Memory Game</h2>
+        <p>Test your memory by matching pairs.</p>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <p>Made with ❤️ by [brandon]</p>
+  </footer>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic-Tac-Toe</h1>
+  <div id="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+  <button id="reset">Reset Game</button>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Snake Game</h1>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Memory Game</h1>
+  <div id="gameBoard"></div>
+  <script src="script.js"></script>
+</body>
+</html>
